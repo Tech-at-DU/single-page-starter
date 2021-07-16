@@ -4,30 +4,42 @@
 		<title></title>
 		<style>
 
-			/* These styles get started */
+			/* Some CSS styles to get you started */
 
 			body {
-				/* Choose a font */
-				/* Set the size of the font */
-				/* Remove the margin from the body */
-				margin: 0;
+				/* TO DO: Choose a font */
+				/* TO DO: Set the size of the font */
+				margin: 0; 	/* Remove the margin from the body */
 			}
 
 			/* Prevents the margins on the headings from 
 			causing problems */
+
 			nav, main > section {
 				overflow: auto;
 			}
 
+			/* You can style two properties at once. For example the nav, main > section, means that we will be giving
+			the nav property and section, which is the child of main, an auto overflow. */
+
+
+			/* When you see something like 'body > div' it means we're styling the child component. In the example given, 
+			we would be styling the child div of the body (whole document) */
+
 			main > section {
-				/* Give each section a minimum height that is 
+				/* TO DO: Give each section a minimum height that is 
 				the height of the window */
 				min-height: 100vh;
 			}
 
-			/* Give each section a different background color. 
-			The id names are unique so styles here apply just 
+			/* TO DO: Give each section a different background color. 
+			The id names are unique so styles here only apply to just 
 			the section they name. */
+
+
+			/* When you see this "#" it means we're looking for the ID. In your HTML, if you declare an id [for example,
+			"section id='nav'""] you can style it directly by calling the ID. */
+
 			#nav {
 				background-color: #FF3B30;
 			}

@@ -12,7 +12,7 @@ For the subject you can think about your single page site similar to writing an 
 
 The difference between the web site and and essay is the website will have pictures and be lighter on text content. 
 
-In [inde-0.html](index-0.html) I've used the boilderplate HTML code along with a series of sectional tags to outline the content. 
+In [inde-0.html](index-0.html) I've used the boilerplate HTML code along with a series of sectional tags to outline the content. 
 
 ```HTML
 <main>
