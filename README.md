@@ -61,11 +61,11 @@ I wanted each section to be as least as tall as the size of the window. This rul
 
 ```CSS
 #nav {
-	background-color: #FF3B30;
+  background-color: #FF3B30;
 }
 
 #banner {
-	background-color: #26B63E;
+  background-color: #26B63E;
 }
 
 ...
