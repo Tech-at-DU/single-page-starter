@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	{% comment %} 
-	INDEX 3 TO DO: Style the Navbar. Check the README for more details. 
-	{% endcomment %}
 		<title></title>
 		<style>
 
@@ -21,7 +18,8 @@
 				min-height: 100vh;
 			}
 
-			/* Styles for the nav bar */
+			/* Style the nav bar. Use flex to arrange 
+			the content of the navbar in a row */
 			#nav {
 				justify-content: space-between;
 				align-items: baseline;
@@ -35,7 +33,6 @@
 				margin: 0
 			}
 
-			/* Setting text decoration to none will remove the underline on links. */
 			nav a {
 				text-decoration: none;
 				color: #eee;
@@ -46,18 +43,18 @@
 				list-style: none;
 			}
 
+			/* Style all of the a tags inside the navbar ul */
 			nav ul a {
-				/* TO DO: Give the links a little more space */
+				/* give the links a little space */
 				padding: 1em;
 				color: tomato;
 			}
 
-			/* This changes the color when your mouse hovers over it. Currently it is set so that the link turns pink when hovered. */
 			nav ul a:hover {
 				color: pink;
 			}
 
-			/* In CSS, when a selector starts with #, this indicates that it is an ID. Similarly, when a selector starts with a period, it is a class selector. */
+
 			#raymond-scott {
 				background-color: #26B63E;
 			}

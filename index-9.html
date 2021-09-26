@@ -2,6 +2,11 @@
 <html>
 	<head>
 		<title>Electronic Music: A short history</title>
+		<!-- Add some JS -->
+		<!-- Animate On Scroll CSS Step 1 -->
+		<!-- https://michalsnik.github.io/aos/ -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		
 		<style>
 
 			body {
@@ -19,6 +24,7 @@
 				min-height: 100vh;
 			}
 
+			/* Style the nav bar */
 			#nav {
 				justify-content: space-between;
 				align-items: baseline;
@@ -117,24 +123,22 @@
 				background-color: #5856D6;
 				background-image: url(images/carlos-0.jpg);
 				background-size: cover;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 			}
 
 			#wendy-carlos > div {
 				background-color:rgba(255, 255, 255, 0.65);
 				padding: 2em;
 				width: 75%;
-				max-width: 700px;
+				max-width: 500px;
 			}
 
-			#wendy-carlos  h2 {
+			#wendy-carlos h2 {
 				font-size: 4em;
 				margin: 0 0 1rem 0;
 				text-align: center;
 			}
 
+			/* Style this */
 			#suzanne-ciani {
 				background-color: #461c3b;
 				display: flex;
@@ -173,7 +177,6 @@
 			}
 
 
-			/* Style the contact form */
 			#contact {
 				background-color: #FF9500;
 				display: flex;
@@ -227,7 +230,6 @@
 				color: #fff;
 				border: none;
 			}
-			/* -------------------------------- */
 		</style>
 	</head>
 	<body>
@@ -244,14 +246,14 @@
 			</nav>
 		
 			<section id="raymond-scott">
-				<div>
+				<div data-aos="fade-up">
 					<h2>Raymond Scott</h2>
 					<p>Some Text...</p>
 				</div>
 			</section>
 		
 			<section id="robert-moog">
-				<h2>Robert Moog</h2>
+				<h2 data-aos="fade-right">Robert Moog</h2>
 				<ul>
 					<li class="card">
 						<img src="images/moog-0.jpg">
@@ -272,23 +274,37 @@
 			</section>
 		
 			<section id="wendy-carlos">
-				<div>
+				<div data-aos="slide-right">
 					<h2>Wendy Carlos</h2>
-					<p>Wendy Carlos
-					Birth name Walter Carlos
-					Born November 14, 1939 (age 80)
-					Pawtucket, Rhode Island, U.S.
-					Genres Electronic, classical, ambient, jazz, synthpop
-					Occupation(s) Musician, composer
-					Instruments Synthesizer, keyboards, vocoder
-					Years active 1964–2005
-					Labels Columbia Masterworks, CBS, Audion, Telarc, East Side Digital
-					Website wendycarlos.com
-					Wendy Carlos (born Walter Carlos; November 14, 1939) is an American musician and composer best known for her electronic
-					music and film scores. Born and raised in Rhode Island, Carlos studied physics and music at Brown University before
-					moving to New York City in 1962 to study music composition at Columbia University. Studying and working with various
-					electronic musicians and technicians at the city's Columbia-Princeton Electronic Music Center, she helped the
-					development of the Moog synthesizer, the first commercially available keyboard instrument created by Robert Moog</p>
+					
+					<p>Birth name Walter Carlos. Born November 14, 1939 (age 80) Pawtucket, Rhode Island, U.S.</p>
+					
+					<h3>Genres</h3>
+
+					<p>
+						Electronic, classical, ambient, jazz, synthpop
+					</p>
+					
+					<h3>Occupation(s)</h3>
+
+					<p>Musician, composer. Instruments Synthesizer, keyboards, vocoder
+					Years active 1964–2005</p>
+					<h3>Labels</h3>
+
+					<p>
+						Columbia Masterworks, CBS, Audion, Telarc, East, Side, Digital
+					</p>
+					
+					<h3>Website</h3> 
+					<a href="wendycarlos.com">wendycarlos.com</a>
+					
+					<p>Wendy Carlos (born Walter Carlos; November 14, 1939) is an American musician and composer 
+						best known for her electronic music and film scores. Born and raised in Rhode Island, Carlos 
+						studied physics and music at Brown University before moving to New York City in 1962 to study 
+						music composition at Columbia University. Studying and working with various electronic 
+						musicians and technicians at the city's Columbia-Princeton Electronic Music Center, she 
+						helped the development of the Moog synthesizer, the first commercially available keyboard 
+						instrument created by Robert Moog</p>
 				</div>
 			</section>
 		
@@ -296,12 +312,14 @@
 				<div>
 					<div>
 						<h2>Suzanne Ciani</h2>
-						<p>Suzanne Ciani (born June 4, 1946) is an American musician, sound designer, composer, and record label executive who
-						found early success in the 1970s with her innovative electronic music and sound effects for films and television
-						commercials. Her career has included works with quadraphonic sound. She has been nominated for a Grammy Award for Best
-						New Age Album five times. Her success with electronic music has her dubbed "Diva of the Diode" and "America's first
-						female synth hero".</p>
+						<p>Suzanne Ciani (born June 4, 1946) is an American musician, sound designer, composer, 
+							and record label executive who found early success in the 1970s with her innovative 
+							electronic music and sound effects for films and television commercials. Her career has 
+							included works with quadraphonic sound. She has been nominated for a Grammy Award for 
+							Best New Age Album five times. Her success with electronic music has her dubbed "Diva 
+							of the Diode" and "America's first female synth hero".</p>
 					</div>
+
 					<div>
 						<img src="images/ciani-2.jpg">
 					</div>
@@ -336,5 +354,20 @@
 				</form>
 			</footer>
 		</main>
+
+		<style>
+			/* Your CSS here! */
+		</style>
+
+		<!-- JS Always goes at the bottom of the body! -->
+		<!-- Animate On Scroll JS Step 2 -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		
+		<!-- Animate on Scroll Step 3 -->
+		<script>
+			// Your JS here!
+			AOS.init();
+		</script>
+
 	</body>
 </html>
