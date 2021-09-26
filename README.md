@@ -16,12 +16,12 @@ In [inde-0.html](index-0.html) I've used the boilderplate HTML code along with a
 
 ```HTML
 <main>
-	<nav id="nav"></nav>
-	<section id="banner"></section>
-	<section id="topic-1"></section>
-	<section id="topic-2"></section>
-	<section id="topic-3"></section>
-	<footer id="contact"></footer>
+  <nav id="nav"></nav>
+  <section id="banner"></section>
+  <section id="topic-1"></section>
+  <section id="topic-2"></section>
+  <section id="topic-3"></section>
+  <footer id="contact"></footer>
 </main>
 ```
 
@@ -35,7 +35,7 @@ This step adds a few styles to get the page to display as a series of sections i
 
 ```CSS
 body {
-	margin: 0;
+  margin: 0;
 }
 ```
 
