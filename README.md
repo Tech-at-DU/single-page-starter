@@ -43,7 +43,7 @@ This block removes the default margin from the body element. Without this you'll
 
 ```CSS
 nav, main > section {
-	overflow: auto;
+  overflow: auto;
 }
 ```
 
@@ -51,7 +51,7 @@ Margins on elements like h1 and p extend outside their containers. This creates 
 
 ```CSS
 main > section {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 ```
 
@@ -81,10 +81,10 @@ To divide the nav bar into two parts ocupying opposite sides you need two child 
 
 ```CSS
 #nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	...
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  ...
 }
 ```
 
@@ -94,8 +94,8 @@ In the example the right side of the nav is a ul with four items. Use flex again
 
 ```CSS
 nav ul {
-	display: flex;
-	list-style: none;
+  display: flex;
+  list-style: none;
 }
 ```
 
@@ -103,7 +103,7 @@ The links should have a little more space.
 
 ```CSS
 nav ul a {
-	padding: 1em;
+  padding: 1em;
 }
 ```
 
@@ -125,9 +125,9 @@ Then I used these styles to make the image fill this section.
 
 ```CSS
 #raymond-scott {
-	background-color: #26B63E;
-	background-image: url(images/scott-1.jpg);
-	background-size: cover;
+  background-color: #26B63E;
+  background-image: url(images/scott-1.jpg);
+  background-size: cover;
 }
 ```
 
@@ -137,10 +137,10 @@ My section had heading and some other text. I wrapped the heading and text in a 
 
 ```HTML
 <section id="raymond-scott">
-	<div>
-		<h2>Raymond Scott</h2>
-		<p>Some Text...</p>
-	</div>
+  <div>
+    <h2>Raymond Scott</h2>
+    <p>Some Text...</p>
+  </div>
 </section>
 ```
 
@@ -148,11 +148,11 @@ The div a block tag, that has no semantic meaning. We use it to do computer stuf
 
 ```CSS
 #raymond-scott {
-	...
+  ...
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ```
 
@@ -160,12 +160,12 @@ Center the children with flex.
 
 ```CSS
 #raymond-scott {
-	...
+  ...
 
-	...
+  ...
 
-	font-size: 4em;
-	color: #fff;
+  font-size: 4em;
+  color: #fff;
 }
 ```
 
@@ -173,8 +173,8 @@ I wanted the text be big and visible. Choose a color that constrasts with the ba
 
 ```CSS
 #raymond-scott h2, #raymond-scott p {
-	margin: 0;
-	text-shadow: 0 0 20px #000000;
+  margin: 0;
+  text-shadow: 0 0 20px #000000;
 }
 ```
 
@@ -186,9 +186,9 @@ I wanted to push the content a little down and the to the right.
 
 ```CSS
 #raymond-scott > div {
-	position: relative;
-	left: -120px;
-	top: 120px;
+  position: relative;
+  left: -120px;
+  top: 120px;
 }
 ```
 
@@ -204,9 +204,9 @@ I started with a list.
 
 ```HTML
 <ul>
-	<li class="card"></li>
-	<li class="card"></li>
-	<li class="card"></li>
+  <li class="card"></li>
+  <li class="card"></li>
+  <li class="card"></li>
 </ul>
 ```
 
@@ -216,9 +216,9 @@ Each list item looked like this:
 
 ```HTML
 <li class="card">
-	<img src="images/moog-0.jpg">
-	<h3>Bob Moog</h3>
-	<p>The inovator...</p>
+  <img src="images/moog-0.jpg">
+  <h3>Bob Moog</h3>
+  <p>The inovator...</p>
 </li>
 ```
 
@@ -228,9 +228,9 @@ Remove the list default styles.
 
 ```CSS 
 #robert-moog ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 ```
 
@@ -238,10 +238,10 @@ Now use flex to arrange the list items in a row.
 
 ```CSS 
 #robert-moog ul {
-	...
+  ...
 
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 ```
 
@@ -249,9 +249,9 @@ Define some card styles:
 
 ```CSS
 .card {
-	width: 400px;
-	margin: 1em;
-	background-color: #eee;
+  width: 400px;
+  margin: 1em;
+  background-color: #eee;
 }
 ```
 
@@ -259,7 +259,7 @@ Make the image fit the width of the card:
 
 ```CSS
 .card img {
-	width: 100%;
+  width: 100%;
 }
 ```
 
@@ -269,10 +269,10 @@ Here I wanted to make a content box that was 75% the width of the container but 
 
 ```CSS
 #wendy-carlos > div {
-	background-color:rgba(255, 255, 255, 0.44);
-	padding: 1em;
-	width: 75%;
-	max-width: 700px;
+  background-color:rgba(255, 255, 255, 0.44);
+  padding: 1em;
+  width: 75%;
+  max-width: 700px;
 }
 ```
 
@@ -286,11 +286,11 @@ Set the background and flex.
 
 ```CSS
 #suzanne-ciani {
-	background-color: #461c3b;
-	display: flex;
-	color: #fff;
-	background-image: url(images/sound-texture.jpg);
-	background-size: cover;
+  background-color: #461c3b;
+  display: flex;
+  color: #fff;
+  background-image: url(images/sound-texture.jpg);
+  background-size: cover;
 }
 ```
 
@@ -298,10 +298,10 @@ Make the container 75% the width of the page.
 
 ```CSS
 #suzanne-ciani > div {
-	display: flex;
-	justify-content: center;
-	width: 75%;
-	margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
 }
 ```
 
@@ -309,12 +309,12 @@ There are two children. One is an image the other has some text.
 
 ```CSS
 #suzanne-ciani > div > div:nth-child(1) {
-	flex: 3;
-	margin: 0 2em 0 0;
+  flex: 3;
+  margin: 0 2em 0 0;
 }
 
 #suzanne-ciani > div > div:nth-child(2) {
-	flex: 2;
+  flex: 2;
 }
 ```
 
@@ -329,8 +329,8 @@ This is the structure I used for the inputs.
 
 ```HTML
 <label>
-	<span>Name</span>
-	<input type="text">
+  <span>Name</span>
+  <input type="text">
 </label>
 ```
 
@@ -340,8 +340,8 @@ To arrange the text above the input use flex and direction column.
 
 ```CSS
 #contact label {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 ```
 
@@ -351,11 +351,11 @@ Be sure to style the border.
 
 ```CSS
 input, textarea {
-	border: 1px solid #000;
-	padding: 0.5em;
-	margin: 0 2em 0 0;
-	width: 20em;
-	font-size: 1em;
+  border: 1px solid #000;
+  padding: 0.5em;
+  margin: 0 2em 0 0;
+  width: 20em;
+  font-size: 1em;
 }
 ```
 
@@ -363,8 +363,8 @@ The teaxtarea is a multiline input setting the height in em will let you set the
 
 ```CSS
 textarea {
-	height: 9em;
-	margin: 0 0 0 0;
+  height: 9em;
+  margin: 0 0 0 0;
 }
 ```
 
@@ -374,14 +374,14 @@ The submit button.
 
 ```CSS
 form button {
-	width: auto;
-	font-size: 1em;
-	margin: 1em 0;
-	align-self: flex-end;
-	padding: 0.5em 1em;
-	background-color:rgb(0, 0, 0);
-	color: #fff;
-	border: none;
+  width: auto;
+  font-size: 1em;
+  margin: 1em 0;
+  align-self: flex-end;
+  padding: 0.5em 1em;
+  background-color:rgb(0, 0, 0);
+  color: #fff;
+  border: none;
 }
 ```
 
