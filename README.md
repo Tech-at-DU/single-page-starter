@@ -4,11 +4,13 @@ This repo contains starter code for building your single page web site.
 
 The code here is shown in stages that walk through the process you might follow to if you were building a single page site from scratch. 
 
+While you can build the example project, its better to swap the content here for content of your own, using this work as a template for a single page site of your own design! 
+
 # Step 0 - index-0.html
 
 The first step is define a subject and content, then divide the content into sections. 
 
-For the subject you can think about your single page site similar to writing an essay. You'll have an introduction, supporting topics, and a conclusion. 
+For the subject you can think about your single page site similar to writing an essay. You'll have an introduction, supporting topics, and a conclusion, each of these is a section. 
 
 The difference between the web site and and essay is the website will have pictures and be lighter on text content. 
 
@@ -29,9 +31,45 @@ In [inde-0.html](index-0.html) I've used the boilderplate HTML code along with a
 
 In this stage I've added content and structure to each section. 
 
+Important! Every section should have a heading! You'll always use headings in order. The top level heading is h1, if this topic has a sub section it will use an h2 heading, and so on. Never choose a heading bcause of the font size! You can always set the font size with CSS. 
+
+Notice each section contains a heading (h1 to h6) and some other content, like p or ul etc. 
+
+```HTML
+<section id="banner">
+  <!-- Section title and heading -->
+  <h2>Name of Section</h2>
+  <!-- Section content expand this with anythings -->
+  <p>Some Text...</p>
+</section>
+
+<section id="topic-1">
+  <!-- A section heading -->
+  <h1>Topic 1</h1>
+  <!-- A section might contain a list -->
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</section>
+```
+
+This might seem a little abstract at this point, since there is no content yet. Use your imagination. Imagine the p contains an interesting paragraph of text and the heading above labels this paragraph section. 
+
+Imagine `topic-1` is a list of of important points and the heading above it names that list. 
+
+Notice that the headings (`h1`, `h2`, etc.) always appear inside the `section` they are labeling. This is important because, placing the heading inside a section associates the heading with that section!
+
 # Step 2 - index-2.html
 
 This step adds a few styles to get the page to display as a series of sections in a single scrolling page. 
+
+Notice the styles exist inside a `<style>` tag. The `style` tag contains code written in the CSS language. 
+
+CSS is written in rules. Every rule has a selector followed by a list of properties and values. 
+
+The rule below uses the "type" selector to select the `body` tag. A selector "selects" elements in the document. The rule applies the values to the properties of the elements selected. In the example below, the property is `margin` and the value is `0`. So this rule sets the `margin` of the `body` tag to a value of `0`.
 
 ```CSS
 body {
@@ -39,7 +77,7 @@ body {
 }
 ```
 
-This block removes the default margin from the body element. Without this you'll a small gap around the edge and your content won't reach the edge of the page. 
+The selecto below, `nav, main > section`, use some extra character to perform a more complex selection. The `,` (comma) is the group selector, it selects two or more groups of selectors. The `>` (greater than) is the child selector, it selects child element, in this case its looking for `section` tags that children of `main`. The whole selector here selects the `nav` tag, and any `section` tags that children of `main`.
 
 ```CSS
 nav, main > section {
@@ -47,7 +85,9 @@ nav, main > section {
 }
 ```
 
-Margins on elements like h1 and p extend outside their containers. This creates gaps between sections. This rule removes those gaps. Try commenting this out and viewing the code in the browser. 
+This block removes the default margin from the body element. Without this you'll a small gap around the edge and your content won't reach the edge of the page. 
+
+Margins on elements like `h1` and `p` extend outside their containers. This creates gaps between sections. This rule removes those gaps. Try commenting this out and viewing the code in the browser. 
 
 ```CSS
 main > section {
@@ -55,9 +95,11 @@ main > section {
 }
 ```
 
-I wanted each section to be as least as tall as the size of the window. This rule says the minimum height should be 100% of the view height. 
+I wanted each section to be as least as tall as the size of the window. This rule says the minimum height should be 100% of the view height (height of the window). 
 
-`vh` is a unit that represents a percent of the browser window. `100vh` is 100% the height of the window. 
+`vh` is a unit that represents a percentage of the browser windows vertical size. `100vh` is `100%` the height of the window, `50vh` would be 50% as tall as the window.
+
+The two selectors below use the `#` to select elements by their `id` name. Find the element with `id="nav"` and `id="banner"`. 
 
 ```CSS
 #nav {
@@ -386,3 +428,68 @@ form button {
 ```
 
 The default button style adds a background and border. Be sure to style thesde. Give the button a contrasting color to make stand apart. You want people to see the button and know they can click it. 
+
+# Step 9 - index-9.html
+This step adds some JavaScript to the page. In this case I added the AOS (Animate On Scroll) library. This some code that applies animations to elements that are applied when those elements scroll into view. 
+
+Read about AOS and see a demo here: https://michalsnik.github.io/aos/
+
+The first step is to import the library. You can link to local files or remote files stored on CDN (Content Delivery Network). I used the second option. 
+
+Add the following to the `<head>` tag: 
+
+```HTML
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+```
+
+This links to CSS styles required for AOS. 
+
+Then add the following to the bottom of the `<body>` tag, before the closing tag `</body>`!.
+
+```HTML
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+```
+
+You can find these links near the bottom of the AOS demo page. 
+
+Why place the script at the bottom of the body tag? JS is run when the browser encounters the tag. If the tag were placed at the top of the page it's possible that some of the would not have loaded when the AOS was run. For AOS to work properly the page needs to be fully loaded before the AOS code is run. Placing the tag at the bottom of the means it loads after all of the other "tags". 
+
+Below this script add another script: 
+
+```HTML
+<script>
+  AOS.init();
+</script>
+```
+
+This line of code initializes AOS. 
+
+## Using AOS
+AOS works through attributes you assign to tags. AOS scans the document for elements with attributes named: `data-aos`. It uses the value of these attributes to detemrine what type of animation to apply to that element. Scan the AOS demo page for examples. 
+
+Scan the example for the attributes I used, find these: 
+
+```HTML
+<div data-aos="fade-up">
+```
+
+```HTML
+<h2 data-aos="fade-right">Robert Moog</h2>
+```
+
+```HTML
+<div data-aos="slide-right">
+```
+
+There are a few more. 
+
+# Conclusion
+This example shows the basics of creating a single page website. It uses HTML, CSS, and JS following principles and ideas used on almost every website you might visit. 
+
+There is a lot more to learn but, these foundational ideas will appear everywhere! 
+
+What did this cover: 
+- HTML tags and semantic HTML
+- CSS, including selectors, properties and values
+- A range of CSS properties including: margin, width and height, font, flex, and more
+- JavaScript, using the script tag, importing code from a CDN, and using the AOS library
